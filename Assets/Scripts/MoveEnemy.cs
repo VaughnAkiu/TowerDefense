@@ -4,20 +4,35 @@ using UnityEngine;
 public class MoveEnemy : MonoBehaviour
 {
     public float speed = 1f;
+    public Rigidbody2D rb;
 
-    private Transform target;
-    private int waypointIndex = 0;
+    //position of enemy, related to waypoints.
+    public int position = 0;
 
-    private void Start()
-    {
-        target = Waypoints.waypoints[0];
-            
-    }
+    //vector2 stores x and y 
+    Vector2 movement;
+    
+
 
     private void Update()
     {
-        Vector3 dir = target.position - transform.position;
-        transform.Translate(dir.normalized * speed * Time.deltaTime, Space.World);
+       
+        
     }
 
+    private void FixedUpdate()
+    {
+        if (position == 0)
+        {
+            movement.x = 1;
+            movement.y = 0;
+        }
+        else if (position == 1)
+        {
+            movement.x = 0;
+            movement.y = 1;
+        }
+        
+        rb.MovePosition(rb.position + movement * speed * Time.fixedDeltaTime);
+    }
 }
