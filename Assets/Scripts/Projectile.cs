@@ -42,7 +42,7 @@ public class Projectile : MonoBehaviour
     void HitTarget ()
     {
         GameObject effectInstance = (GameObject)Instantiate(impactEffect, transform.position, transform.rotation);
-        Destroy(effectInstance, 2f);
+        Destroy(effectInstance, 0.5f);
 
         Destroy(gameObject);
     
