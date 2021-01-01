@@ -11,8 +11,16 @@ public class MoveEnemy : MonoBehaviour
 
     //vector2 stores x and y 
     Vector2 movement;
-    
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Debug.Log("collision detected");
+        if (collision.name == "Waypoint1")
+        {
+            position = 1;
+        }
+        
+    }
 
     private void Update()
     {
@@ -22,15 +30,18 @@ public class MoveEnemy : MonoBehaviour
 
     private void FixedUpdate()
     {
+
+
         if (position == 0)
         {
             movement.x = 1;
             movement.y = 0;
         }
-        else if (position == 1)
+
+        if (position == 1)
         {
             movement.x = 0;
-            movement.y = 1;
+            movement.y = -1;
         }
         
         rb.MovePosition(rb.position + movement * speed * Time.fixedDeltaTime);
