@@ -4,15 +4,19 @@ using UnityEngine;
 
 public class Tower : MonoBehaviour
 {
-
+    [Header("Attributes")]
     public Transform target;
     public float range = 1f;
-
-    public string enemyTag = "Enemy";
-
-
     public float fireRate = 1f;
     private float fireCountdown = 0f;
+
+    [Header("Unity Setup Fields")]
+    public string enemyTag = "Enemy";
+
+    public GameObject projectilePreFab;
+    public Transform firePoint;
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -66,7 +70,13 @@ public class Tower : MonoBehaviour
 
     void Shoot()
     {
-        Debug.Log("Shoot");
+        GameObject projectileGameObject = (GameObject)Instantiate(projectilePreFab, firePoint.position, firePoint.rotation);
+        Projectile projectile = projectileGameObject.GetComponent<Projectile>();
+
+        if (projectile != null)
+        {
+            projectile.Seek(target);
+        }
     }
 
 
