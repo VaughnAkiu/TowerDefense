@@ -69,7 +69,7 @@ public class MoveEnemy : MonoBehaviour
         }
         else if (position == 3)
         {
-            movement.x = 1;
+            movement.x = -1;
             movement.y = 0;
         }
         else if (position == 4)
