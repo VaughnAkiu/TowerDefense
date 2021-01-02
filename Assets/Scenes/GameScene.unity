@@ -208,7 +208,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.05
+  m_Radius: 0.04
 --- !u!114 &344845387
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -378,7 +378,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.05
+  m_Radius: 0.04
 --- !u!212 &773436954
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -515,7 +515,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.05
+  m_Radius: 0.04
 --- !u!114 &782522054
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -627,7 +627,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.05
+  m_Radius: 0.04
 --- !u!114 &834935263
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1044,7 +1044,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.05
+  m_Radius: 0.04
 --- !u!114 &1966199062
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1156,7 +1156,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.05
+  m_Radius: 0.04
 --- !u!114 &2012747125
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1196,11 +1196,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6152755603204717043, guid: 3468d780b0aeb7d43836bbcd0d00cf92, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.52
+      value: 0.43
       objectReference: {fileID: 0}
     - target: {fileID: 6152755603204717043, guid: 3468d780b0aeb7d43836bbcd0d00cf92, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.85
+      value: 3.3
       objectReference: {fileID: 0}
     - target: {fileID: 6152755603204717043, guid: 3468d780b0aeb7d43836bbcd0d00cf92, type: 3}
       propertyPath: m_LocalPosition.z
