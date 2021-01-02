@@ -15,8 +15,9 @@ public class BuildManager : MonoBehaviour
         instance = this;
     }
 
+    //turrets
     public GameObject standardTurretPrefab;
-
+    public GameObject turret2;
 
     private void Start()
     {
