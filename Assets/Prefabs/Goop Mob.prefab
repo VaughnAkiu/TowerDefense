@@ -65,11 +65,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
+  m_Sprite: {fileID: 21300000, guid: f15177e127d0e8943acfdd918001922c, type: 3}
+  m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
-  m_FillMethod: 4
+  m_FillMethod: 0
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
@@ -323,6 +323,7 @@ GameObject:
   - component: {fileID: 3583212499879207195}
   - component: {fileID: 3583212499879207197}
   - component: {fileID: -5555816596327071533}
+  - component: {fileID: 8660961723734838613}
   m_Layer: 0
   m_Name: Goop Mob
   m_TagString: Enemy
@@ -458,6 +459,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.6, y: 0.5}
   m_EdgeRadius: 0
+--- !u!114 &8660961723734838613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3583212499879207190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f722edda9f846b6438f8ab88a53b512f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingHealth: 10
+  startSpeed: 0
+  speed: 0
+  healthBar: {fileID: 3439869144774369175}
 --- !u!1 &7075460592268655309
 GameObject:
   m_ObjectHideFlags: 0

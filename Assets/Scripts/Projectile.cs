@@ -6,6 +6,8 @@ public class Projectile : MonoBehaviour
     private Transform target;
 
     public float speed = 25f;
+    public int damage = 2;
+
     public GameObject impactEffect;
 
 
@@ -36,7 +38,7 @@ public class Projectile : MonoBehaviour
         }
 
         transform.Translate(direction.normalized * distanceThisFrame, Space.World);
-
+        //transform.LookAt(target);
     }
 
     void HitTarget ()
@@ -44,9 +46,22 @@ public class Projectile : MonoBehaviour
         GameObject effectInstance = (GameObject)Instantiate(impactEffect, transform.position, transform.rotation);
         Destroy(effectInstance, 0.5f);
 
-        Destroy(target.gameObject);
+        Damage(target);
+        //if target is dead can destroy target.gameObject
+        //Destroy(target.gameObject);
         Destroy(gameObject);
     
     }
 
+
+    void Damage (Transform enemy)
+    {
+        Enemy e = enemy.GetComponent<Enemy>();
+
+        //if gameObject exists takedamage
+        if (e != null)
+        {
+            e.TakeDamage(damage);
+        }
+    }
 }
