@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class PlayerStats : MonoBehaviour
 {
-
-    public int gold;
-    public int mobKills;
-    public int livesRemaining;
+    //use static so can be accessed by other scripts
+    public static int gold;
+    public static int mobKills = 0;
+    public static int livesRemaining;
     
 
 }

@@ -47,6 +47,9 @@ public class Enemy : MonoBehaviour
         isDead = true;
         //increase player money when mob dies
 
+        //increase kill count
+        PlayerStats.mobKills++;
+        
         //play death effect (instantiate one)
         //destroy death effect after time Destroy(effect, 5f)
 
