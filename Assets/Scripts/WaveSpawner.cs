@@ -28,7 +28,7 @@ public class WaveSpawner : MonoBehaviour
 
     void SpawnWave ()
     {
-        Debug.Log("Wave Spawned!");
+        //Debug.Log("Wave Spawned!");
         SpawnEnemy();
         waveNumber++;
 

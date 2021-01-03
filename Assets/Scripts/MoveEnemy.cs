@@ -14,7 +14,7 @@ public class MoveEnemy : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("collision detected");
+        //Debug.Log("collision detected");
         if (collision.name == "Waypoint1")
         {
             position = 1;
