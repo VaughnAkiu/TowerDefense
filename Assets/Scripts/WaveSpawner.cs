@@ -11,8 +11,10 @@ public class WaveSpawner : MonoBehaviour
 
     public Transform spawnPoint;
 
-    private float timeBetweenWaves = 1f;
+    private float timeBetweenWaves = 5f;
     private float countdown = 2f;
+
+    private bool spawnAllowed = false;
 
     private int waveNumber = 1;
 
@@ -34,11 +36,21 @@ public class WaveSpawner : MonoBehaviour
         SpawnEnemy();
         waveNumber++;
 
+        if (waveNumber == 20)
+        {
+            SpawnBoss();
+        }
+
     }
 
     void SpawnEnemy()
     {
         Instantiate(goopMob, spawnPoint.position, spawnPoint.rotation);
+    }
+
+    void SpawnBoss()
+    {
+        Instantiate(goopChunk, spawnPoint.position, spawnPoint.rotation);
     }
 
 }
