@@ -13,6 +13,7 @@ public class Enemy : MonoBehaviour
 
     [Header("Unity Stuff")]
     public Image healthBar;
+    public Text healthBarText;
     
 
     private bool isDead = false;
@@ -30,6 +31,7 @@ public class Enemy : MonoBehaviour
         health -= amount;
         //fill amount related to healthBar (Image)
         healthBar.fillAmount = health / startingHealth;
+        healthBarText.text = health + "/" + startingHealth;
 
         if (health <= 0 && !isDead)
         {
