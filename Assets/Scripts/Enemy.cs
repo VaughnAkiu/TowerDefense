@@ -13,6 +13,7 @@ public class Enemy : MonoBehaviour
 
     [Header("Unity Stuff")]
     public Image healthBar;
+    
 
     private bool isDead = false;
     //public GameObject deathEffect;
@@ -42,6 +43,9 @@ public class Enemy : MonoBehaviour
         speed = startSpeed * (1f - percent);
     }
 
+
+
+
     void Die()
     {
         isDead = true;
@@ -49,7 +53,7 @@ public class Enemy : MonoBehaviour
 
         //increase kill count
         PlayerStats.mobKills++;
-        
+        PlayerStats.instance.ChangeKillCountText();
         //play death effect (instantiate one)
         //destroy death effect after time Destroy(effect, 5f)
 
