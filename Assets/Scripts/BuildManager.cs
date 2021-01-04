@@ -19,17 +19,25 @@ public class BuildManager : MonoBehaviour
     }
 
     //turrets
-    public GameObject standardTurretPrefab;
-    public GameObject turret2;
+    public GameObject FlameTower;
+    public GameObject FrostTower;
 
     private GameObject turretToBuild;
-
+    /*
     private void Start()
     {
-        turretToBuild = standardTurretPrefab;
+        turretToBuild = FlameTower;
+    }*/
+
+    public void BuildFlameTower()
+    {
+        turretToBuild = FlameTower;
     }
 
-    
+    public void BuildFrostTower()
+    {
+        turretToBuild = FrostTower;
+    }
 
     public GameObject GetTurretToBuild()
     {
