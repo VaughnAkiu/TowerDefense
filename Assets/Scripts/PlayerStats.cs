@@ -9,11 +9,11 @@ public class PlayerStats : MonoBehaviour
     //use static so can be accessed by other scripts
     public static int gold;
     public static int mobKills = 0;
-    public static int livesRemaining;
+    public static int livesRemaining = 100;
 
     //Unity stuff
     public Text killCountText;
-
+    public Text playerLivesText;
 
     //singleton pattern
     //one instance of PlayerStats referencing itself
@@ -26,6 +26,8 @@ public class PlayerStats : MonoBehaviour
             return;
         }
         instance = this;
+
+        //possibly load in save file here
     }
 
 
@@ -35,4 +37,8 @@ public class PlayerStats : MonoBehaviour
         //killCountText.GetComponent<Text>().text = "Kill Count " + PlayerStats.mobKills;
     }
     
+    public void ChangePlayerLives()
+    {
+        playerLivesText.text = "Lives: " + PlayerStats.livesRemaining;
+    }
 }

@@ -15,31 +15,46 @@ public class MoveEnemy : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         //Debug.Log("collision detected");
-        if (collision.name == "Waypoint1")
+        if (collision.name == "MoveDown")
         {
             position = 1;
+            movement.x = 0;
+            movement.y = -1;
+
         }
-        else if (collision.name == "Waypoint2")
+        else if (collision.name == "MoveRight")
         {
             position = 2;
+            movement.x = 1;
+            movement.y = 0;
+
         }
-        else if (collision.name == "Waypoint3")
+        else if (collision.name == "MoveLeft")
         {
             position = 3;
+            movement.x = -1;
+            movement.y = 0;
+
         }
-        else if (collision.name == "Waypoint4")
+        else if (collision.name == "MoveUp")
         {
             position = 4;
+            movement.x = 0;
+            movement.y = 1;
+
         }
-        else if (collision.name == "Waypoint5")
+        else if (collision.name == "Endpoint")
         {
-            position = 5;
-        }
-        else if (collision.name == "Waypoint6")
-        {
-            position = 6;
+            //Destroy(Trigger);
         }
 
+    }
+
+    private void Start()
+    {
+        movement.x = 0;
+        movement.y = -1;
+        
     }
 
     private void Update()
@@ -50,7 +65,7 @@ public class MoveEnemy : MonoBehaviour
 
     private void FixedUpdate()
     {
-
+        /*
         //starting point
         if (position == 0)
         {
@@ -86,8 +101,9 @@ public class MoveEnemy : MonoBehaviour
         {
             movement.x = 0;
             movement.y = -1;
-        }
+        }*/
 
         rb.MovePosition(rb.position + movement * speed * Time.fixedDeltaTime);
+        
     }
 }
