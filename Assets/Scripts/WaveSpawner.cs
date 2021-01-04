@@ -11,8 +11,8 @@ public class WaveSpawner : MonoBehaviour
 
     public Transform spawnPoint;
 
-    private float timeBetweenWaves = 5f;
-    private float countdown = 2f;
+    //private float timeBetweenWaves = 5f;
+    //private float countdown = 2f;
 
     private bool spawnAllowed = false;
 
@@ -30,7 +30,11 @@ public class WaveSpawner : MonoBehaviour
         {
             SpawnBoss();
             yield return new WaitForSecondsRealtime(5);
+            ChangeWaveLevelText();
         }
+
+        
+
     }
 
     // Update is called once per frame
@@ -57,6 +61,12 @@ public class WaveSpawner : MonoBehaviour
             SpawnBoss();
         }
 
+    }
+
+    void ChangeWaveLevelText ()
+    {
+        PlayerStats.waveLevel = waveNumber;
+        PlayerStats.instance.ChangeWaveLevelText();
     }
 
     void SpawnGoopMob()
