@@ -18,11 +18,23 @@ public class WaveSpawner : MonoBehaviour
 
     private int waveNumber = 1;
 
-    //trying to
+    //trying to create a more efficient wave spawner
+    private void Start()
+    {
+        StartCoroutine(SpawnEnemy());
+    }
 
+    IEnumerator SpawnEnemy()
+    {
+        while(true)
+        {
+            SpawnBoss();
+            yield return new WaitForSecondsRealtime(5);
+        }
+    }
 
     // Update is called once per frame
-    void Update()
+    /*void Update()
     {
         if (countdown <= 0f)
         {
@@ -31,7 +43,7 @@ public class WaveSpawner : MonoBehaviour
         }
         countdown -= Time.deltaTime;
 
-    }
+    }*/
 
     void SpawnWave ()
     {
@@ -47,7 +59,7 @@ public class WaveSpawner : MonoBehaviour
 
     }
 
-    void SpawnEnemy()
+    void SpawnGoopMob()
     {
         Instantiate(goopMob, spawnPoint.position, spawnPoint.rotation);
     }
