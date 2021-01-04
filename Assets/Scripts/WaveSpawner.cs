@@ -15,22 +15,36 @@ public class WaveSpawner : MonoBehaviour
     //private float countdown = 2f;
 
     private bool spawnAllowed = false;
+    private bool currentlySpawning = false;
 
     private int waveNumber = 1;
 
-    //trying to create a more efficient wave spawner
-    private void Start()
+    
+    public void TriggerSpawn()
     {
-        StartCoroutine(SpawnEnemy());
+        if (currentlySpawning == false)
+        {
+            StartCoroutine(SpawnEnemy());
+            ChangeWaveLevelText();
+            currentlySpawning = true;
+        }
+
     }
 
+    public void StopSpawn()
+    {
+        StopCoroutine(SpawnEnemy());
+        currentlySpawning = false;
+    }
+
+
+    //trying to create a more efficient wave spawner
     IEnumerator SpawnEnemy()
     {
         while(true)
         {
             SpawnBoss();
             yield return new WaitForSecondsRealtime(5);
-            ChangeWaveLevelText();
         }
 
         
