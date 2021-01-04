@@ -46,7 +46,7 @@ public class MoveEnemy : MonoBehaviour
         else if (collision.name == "Endpoint")
         {
             PlayerStats.livesRemaining--;
-            PlayerStats.instance.ChangePlayerLives();
+            PlayerStats.instance.ChangePlayerLivesText();
             Destroy(gameObject);
 
         }

@@ -10,10 +10,12 @@ public class PlayerStats : MonoBehaviour
     public static int gold;
     public static int mobKills = 0;
     public static int livesRemaining = 100;
+    public static int waveLevel;
 
     //Unity stuff
     public Text killCountText;
     public Text playerLivesText;
+    public Text waveLevelText;
 
     //singleton pattern
     //one instance of PlayerStats referencing itself
@@ -43,8 +45,13 @@ public class PlayerStats : MonoBehaviour
         //killCountText.GetComponent<Text>().text = "Kill Count " + PlayerStats.mobKills;
     }
     
-    public void ChangePlayerLives()
+    public void ChangePlayerLivesText()
     {
         playerLivesText.text = "Lives: " + PlayerStats.livesRemaining;
+    }
+
+    public void ChangeWaveLevelText()
+    {
+        waveLevelText.text = "Wave Level: " + PlayerStats.waveLevel;
     }
 }

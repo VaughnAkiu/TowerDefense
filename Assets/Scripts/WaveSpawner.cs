@@ -18,6 +18,9 @@ public class WaveSpawner : MonoBehaviour
 
     private int waveNumber = 1;
 
+    //trying to
+
+
     // Update is called once per frame
     void Update()
     {
@@ -33,7 +36,8 @@ public class WaveSpawner : MonoBehaviour
     void SpawnWave ()
     {
         //Debug.Log("Wave Spawned!");
-        SpawnEnemy();
+        //SpawnEnemy();
+        SpawnBoss();
         waveNumber++;
 
         if (waveNumber == 20)
