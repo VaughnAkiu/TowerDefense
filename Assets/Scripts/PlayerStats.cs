@@ -30,6 +30,12 @@ public class PlayerStats : MonoBehaviour
         //possibly load in save file here
     }
 
+    private void Start()
+    {
+        killCountText.text = "Kill Count: " + PlayerStats.mobKills;
+        playerLivesText.text = "Lives: " + PlayerStats.livesRemaining;
+    }
+
 
     public void ChangeKillCountText()
     {

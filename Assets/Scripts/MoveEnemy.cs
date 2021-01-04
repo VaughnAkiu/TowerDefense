@@ -45,7 +45,10 @@ public class MoveEnemy : MonoBehaviour
         }
         else if (collision.name == "Endpoint")
         {
-            //Destroy(Trigger);
+            PlayerStats.livesRemaining--;
+            PlayerStats.instance.ChangePlayerLives();
+            Destroy(gameObject);
+
         }
 
     }
