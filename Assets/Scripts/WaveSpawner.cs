@@ -5,7 +5,9 @@ using UnityEngine;
 public class WaveSpawner : MonoBehaviour
 {
 
-    public Transform enemyPrefab;
+    //public Transform enemyPrefab;
+    public Transform goopMob;
+    public Transform goopChunk;
 
     public Transform spawnPoint;
 
@@ -36,7 +38,7 @@ public class WaveSpawner : MonoBehaviour
 
     void SpawnEnemy()
     {
-        Instantiate(enemyPrefab, spawnPoint.position, spawnPoint.rotation);
+        Instantiate(goopMob, spawnPoint.position, spawnPoint.rotation);
     }
 
 }

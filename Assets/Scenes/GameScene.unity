@@ -2092,7 +2092,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b86f0a885a3b8564eba14e3e077c6289, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 3583212499879207192, guid: a6f6c41f7dfd3f94c98082bc229f1230, type: 3}
+  goopMob: {fileID: 3583212499879207192, guid: a6f6c41f7dfd3f94c98082bc229f1230, type: 3}
+  goopChunk: {fileID: 8476821009448230875, guid: c4854567bc1b39e4caaf93051db5dc3e, type: 3}
   spawnPoint: {fileID: 1784681834}
 --- !u!4 &1706927764
 Transform:
