@@ -9,6 +9,8 @@ public class Tower : MonoBehaviour
     public float range = 1f;
     public float fireRate = 1f;
     private float fireCountdown = 0f;
+    AudioSource audioSource;
+    public AudioClip shootNoise;
 
     [Header("Unity Setup Fields")]
     public string enemyTag = "Enemy";
@@ -21,7 +23,10 @@ public class Tower : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //watch out for using alot of these
         InvokeRepeating("UpdateTarget", 0f, 0.5f);
+        audioSource = GetComponent<AudioSource>();
+
     }
 
     //check every definied amount of time for targets
@@ -75,6 +80,7 @@ public class Tower : MonoBehaviour
 
         if (projectile != null)
         {
+            //audioSource.PlayOneShot(shootNoise, 0.5f);
             projectile.Seek(target);
         }
     }

@@ -98,9 +98,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   range: 5
-  fireRate: 5
+  fireRate: 2
+  shootNoise: {fileID: 8300000, guid: 2325f5391f6ad584791f86f46fb51a06, type: 3}
   enemyTag: Enemy
-  projectilePreFab: {fileID: 5503341703381767333, guid: 203cc747570557d418f74044c71b7332, type: 3}
+  projectilePreFab: {fileID: 9051573058420525348, guid: e021ab4fc13d2e34c84d4e10c91e0a1c, type: 3}
   firePoint: {fileID: 2657537281329248979}
 --- !u!1 &2657537281329248976
 GameObject:
