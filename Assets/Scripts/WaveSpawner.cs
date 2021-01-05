@@ -19,37 +19,81 @@ public class WaveSpawner : MonoBehaviour
 
     private int waveNumber = 1;
 
-    
+    //function that goes with next wave button
     public void TriggerSpawn()
     {
+        //make sure cant spawn while already spawning
         if (currentlySpawning == false)
         {
-            StartCoroutine(SpawnEnemy());
-            ChangeWaveLevelText();
-            currentlySpawning = true;
+            if (waveNumber == 1)
+            {
+                StartCoroutine(SpawnLevelOne());
+                ChangeWaveLevelText();
+                currentlySpawning = true;
+            }
+            else if (waveNumber == 2)
+            {
+                StartCoroutine(SpawnLevelTwo());
+                ChangeWaveLevelText();
+                currentlySpawning = true;
+            }
+            else if (waveNumber == 3)
+            {
+                StartCoroutine(SpawnLevelThree());
+                ChangeWaveLevelText();
+                currentlySpawning = true;
+            }
         }
-
     }
 
-    public void StopSpawn()
-    {
-        StopCoroutine(SpawnEnemy());
-        currentlySpawning = false;
-    }
-
-
+    /*
+     * ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+     * WAVE LEVELS
+     * ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+     * */
     //trying to create a more efficient wave spawner
-    IEnumerator SpawnEnemy()
+    IEnumerator SpawnLevelOne()
     {
-        while(true)
+        for (int i = 0; i < 10; i++)
         {
-            SpawnBoss();
-            yield return new WaitForSecondsRealtime(5);
+            yield return new WaitForSecondsRealtime(2);
+            SpawnGoopMob();
         }
-
-        
-
+        StopCoroutine(SpawnLevelOne());
+        currentlySpawning = false;
+        waveNumber++;
     }
+    
+    IEnumerator SpawnLevelTwo()
+    {
+        for (int i = 0; i < 20; i++)
+        {
+            yield return new WaitForSecondsRealtime(1);
+            SpawnGoopMob();
+        }
+        StopCoroutine(SpawnLevelTwo());
+        currentlySpawning = false;
+        waveNumber++;
+    }
+
+    IEnumerator SpawnLevelThree()
+    {
+        for (int i = 0; i < 1; i++)
+        {
+            yield return new WaitForSecondsRealtime(5);
+            SpawnGoopChunk();
+        }
+        StopCoroutine(SpawnLevelThree());
+        currentlySpawning = false;
+        waveNumber++;
+    }
+    /*
+ * ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ * WAVE LEVELS
+ * ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ * */
+
+
 
     // Update is called once per frame
     /*void Update()
@@ -67,12 +111,12 @@ public class WaveSpawner : MonoBehaviour
     {
         //Debug.Log("Wave Spawned!");
         //SpawnEnemy();
-        SpawnBoss();
+        SpawnGoopChunk();
         waveNumber++;
 
         if (waveNumber == 20)
         {
-            SpawnBoss();
+            SpawnGoopChunk();
         }
 
     }
@@ -88,7 +132,7 @@ public class WaveSpawner : MonoBehaviour
         Instantiate(goopMob, spawnPoint.position, spawnPoint.rotation);
     }
 
-    void SpawnBoss()
+    void SpawnGoopChunk()
     {
         Instantiate(goopChunk, spawnPoint.position, spawnPoint.rotation);
     }
