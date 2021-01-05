@@ -130,5 +130,5 @@ MonoBehaviour:
   range: 5
   fireRate: 1
   enemyTag: Enemy
-  projectilePreFab: {fileID: 5503341703381767333, guid: 203cc747570557d418f74044c71b7332, type: 3}
+  projectilePreFab: {fileID: 4691547246493804362, guid: 54302feef4c13b24292cf9ae22241ce9, type: 3}
   firePoint: {fileID: 4445632433972480105}
