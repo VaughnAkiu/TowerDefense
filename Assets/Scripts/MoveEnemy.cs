@@ -55,8 +55,8 @@ public class MoveEnemy : MonoBehaviour
 
     private void Start()
     {
-        movement.x = 0;
-        movement.y = -1;
+        movement.x = 1;
+        movement.y = 0;
         
     }
 

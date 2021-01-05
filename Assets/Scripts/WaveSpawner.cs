@@ -14,7 +14,7 @@ public class WaveSpawner : MonoBehaviour
     //private float timeBetweenWaves = 5f;
     //private float countdown = 2f;
 
-    private bool spawnAllowed = false;
+    //private bool spawnAllowed = false;
     private bool currentlySpawning = false;
 
     private int waveNumber = 1;
