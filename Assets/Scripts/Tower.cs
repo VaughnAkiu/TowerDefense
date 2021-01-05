@@ -9,7 +9,7 @@ public class Tower : MonoBehaviour
     public float range = 1f;
     public float fireRate = 1f;
     private float fireCountdown = 0f;
-    AudioSource audioSource;
+   // AudioSource audioSource;
     public AudioClip shootNoise;
 
     [Header("Unity Setup Fields")]
@@ -25,7 +25,7 @@ public class Tower : MonoBehaviour
     {
         //watch out for using alot of these
         InvokeRepeating("UpdateTarget", 0f, 0.5f);
-        audioSource = GetComponent<AudioSource>();
+        //audioSource = GetComponent<AudioSource>();
 
     }
 
@@ -67,6 +67,7 @@ public class Tower : MonoBehaviour
         {
             Shoot();
             fireCountdown = 1f / fireRate;
+            
         }
         fireCountdown -= Time.deltaTime;
 
@@ -77,10 +78,11 @@ public class Tower : MonoBehaviour
     {
         GameObject projectileGameObject = (GameObject)Instantiate(projectilePreFab, firePoint.position, firePoint.rotation);
         Projectile projectile = projectileGameObject.GetComponent<Projectile>();
+        //audioSource.PlayOneShot(shootNoise, 0.5f);
+        AudioSource.PlayClipAtPoint(shootNoise, transform.position, 0.5F);
 
         if (projectile != null)
         {
-            //audioSource.PlayOneShot(shootNoise, 0.5f);
             projectile.Seek(target);
         }
     }

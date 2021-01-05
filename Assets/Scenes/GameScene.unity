@@ -1030,7 +1030,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 193650063}
   m_CullTransparentMesh: 1
---- !u!1001 &414909085
+--- !u!1001 &426988575
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -1039,7 +1039,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2657537280754728979, guid: 29f998ff540f26840a64efee4ddfbe2d, type: 3}
       propertyPath: m_Name
-      value: LightningTower
+      value: LightningTower (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2657537280754728980, guid: 29f998ff540f26840a64efee4ddfbe2d, type: 3}
+      propertyPath: fireRate
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2657537280754728981, guid: 29f998ff540f26840a64efee4ddfbe2d, type: 3}
       propertyPath: m_RootOrder
@@ -1047,11 +1051,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2657537280754728981, guid: 29f998ff540f26840a64efee4ddfbe2d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.393187
+      value: -4.4509754
       objectReference: {fileID: 0}
     - target: {fileID: 2657537280754728981, guid: 29f998ff540f26840a64efee4ddfbe2d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.5373123
+      value: 1.506228
       objectReference: {fileID: 0}
     - target: {fileID: 2657537280754728981, guid: 29f998ff540f26840a64efee4ddfbe2d, type: 3}
       propertyPath: m_LocalPosition.z
