@@ -21,6 +21,7 @@ public class BuildManager : MonoBehaviour
     //turrets
     public GameObject FlameTower;
     public GameObject FrostTower;
+    public GameObject LightningTower;
 
     private GameObject turretToBuild;
     /*
@@ -37,6 +38,11 @@ public class BuildManager : MonoBehaviour
     public void BuildFrostTower()
     {
         turretToBuild = FrostTower;
+    }
+
+    public void BuildLightningTower()
+    {
+        turretToBuild = LightningTower;
     }
 
     public GameObject GetTurretToBuild()
