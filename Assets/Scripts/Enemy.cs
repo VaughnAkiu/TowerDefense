@@ -7,8 +7,10 @@ public class Enemy : MonoBehaviour
 {
     public float startingHealth = 10;
     public float startSpeed;
-
     public float speed;
+    //gold rewarded
+    public int gold;
+
     private float health;
 
     [Header("Unity Stuff")]
@@ -52,6 +54,8 @@ public class Enemy : MonoBehaviour
     {
         isDead = true;
         //increase player money when mob dies
+        PlayerStats.gold = PlayerStats.gold + gold;
+        PlayerStats.instance.ChangeGoldText();
 
         //increase kill count
         PlayerStats.mobKills++;

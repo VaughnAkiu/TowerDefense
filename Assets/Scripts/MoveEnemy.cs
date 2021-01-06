@@ -7,7 +7,7 @@ public class MoveEnemy : MonoBehaviour
     public Rigidbody2D rb;
 
     //position of enemy, related to waypoints.
-    public int position = 0;
+    private int position = 0;
 
     //vector2 stores x and y 
     Vector2 movement;

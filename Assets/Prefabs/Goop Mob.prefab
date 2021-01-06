@@ -277,7 +277,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 2
   rb: {fileID: 3583212499879207197}
-  position: 0
 --- !u!50 &3583212499879207197
 Rigidbody2D:
   serializedVersion: 4
@@ -340,6 +339,7 @@ MonoBehaviour:
   startingHealth: 10
   startSpeed: 0
   speed: 0
+  gold: 1
   healthBar: {fileID: 3439869144774369175}
   healthBarText: {fileID: 4264448210535497394}
 --- !u!1 &5651418053811935660

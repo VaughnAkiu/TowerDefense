@@ -16,6 +16,7 @@ public class PlayerStats : MonoBehaviour
     public Text killCountText;
     public Text playerLivesText;
     public Text waveLevelText;
+    public Text playerGoldText;
 
     //singleton pattern
     //one instance of PlayerStats referencing itself
@@ -53,5 +54,10 @@ public class PlayerStats : MonoBehaviour
     public void ChangeWaveLevelText()
     {
         waveLevelText.text = "Wave Level: " + PlayerStats.waveLevel;
+    }
+
+    public void ChangeGoldText()
+    {
+        playerGoldText.text = "Gold: " + PlayerStats.gold;
     }
 }
