@@ -7,7 +7,7 @@ public class MoveEnemy : MonoBehaviour
     public Rigidbody2D rb;
 
     //position of enemy, related to waypoints.
-    private int position = 0;
+    //private int position = 0;
 
     //vector2 stores x and y 
     Vector2 movement;
@@ -17,28 +17,28 @@ public class MoveEnemy : MonoBehaviour
         //Debug.Log("collision detected");
         if (collision.name == "MoveDown")
         {
-            position = 1;
+            //position = 1;
             movement.x = 0;
             movement.y = -1;
 
         }
         else if (collision.name == "MoveRight")
         {
-            position = 2;
+            //position = 2;
             movement.x = 1;
             movement.y = 0;
 
         }
         else if (collision.name == "MoveLeft")
         {
-            position = 3;
+            //position = 3;
             movement.x = -1;
             movement.y = 0;
 
         }
         else if (collision.name == "MoveUp")
         {
-            position = 4;
+            //position = 4;
             movement.x = 0;
             movement.y = 1;
 
