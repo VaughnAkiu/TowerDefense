@@ -8,6 +8,12 @@ public class BuildManager : MonoBehaviour
     public static BuildManager instance;
 
 
+    //implementing this to try and understand it better.
+    private BuildableTile selectedTile;
+
+    public BuildableTileUI buildableTileUI;
+
+
     private void Awake()
     {
         if (instance != null)
@@ -30,24 +36,50 @@ public class BuildManager : MonoBehaviour
         turretToBuild = FlameTower;
     }*/
 
+
     public void BuildFlameTower()
     {
         turretToBuild = FlameTower;
+        selectedTile = null;
+        buildableTileUI.HideUI();
     }
-
     public void BuildFrostTower()
     {
         turretToBuild = FrostTower;
+        selectedTile = null;
+        buildableTileUI.HideUI();
     }
-
     public void BuildLightningTower()
     {
         turretToBuild = LightningTower;
+        selectedTile = null;
+        buildableTileUI.HideUI();
+
     }
+
 
     public GameObject GetTurretToBuild()
     {
         return turretToBuild;
+    }
+
+    public void SelectNode(BuildableTile node)
+    {
+        if (selectedTile == node)
+        {
+            DeselectNode();
+            return;
+        }
+
+        turretToBuild = null;
+        selectedTile = node;
+        buildableTileUI.SetTarget(node);
+    }
+
+    public void DeselectNode()
+    {
+        selectedTile = null;
+        buildableTileUI.HideUI();
     }
 
 
