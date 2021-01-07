@@ -1,14 +1,28 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class Tooltip : MonoBehaviour
 {
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        Debug.Log("Enter");
+        //show tooltip
+    
+    }
 
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        Debug.Log("Exit");
+        //hide tooltip
+    }
+
+
+    /*
     private Text tooltipText;
     private RectTransform backgroundRectTransform;
-
 
     private void Awake()
     {
@@ -33,5 +47,5 @@ public class Tooltip : MonoBehaviour
     {
         gameObject.SetActive(false);
     }
-
+    */
 }
