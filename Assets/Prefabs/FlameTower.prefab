@@ -129,6 +129,7 @@ MonoBehaviour:
   target: {fileID: 0}
   range: 5
   fireRate: 1
+  shootNoise: {fileID: 8300000, guid: c59c93b12905041429198d8ca1bb3f9c, type: 3}
   enemyTag: Enemy
   projectilePreFab: {fileID: 4691547246493804362, guid: 54302feef4c13b24292cf9ae22241ce9, type: 3}
   firePoint: {fileID: 4445632433972480105}
