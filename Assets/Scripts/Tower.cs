@@ -1,20 +1,27 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Tower : MonoBehaviour
 {
-    [Header("Attributes")]
+    [Header("Attributes")] //edit within Unity
     public Transform target;
     public float range = 1f;
     public float fireRate = 1f;
     private float fireCountdown = 0f;
-
     public int goldCost;
+    public int upgradeCost;
     public string towerTitle;
     public string towerDescription;
+
     // AudioSource audioSource;
     public AudioClip shootNoise;
+
+    //scriptables
+    //going to have to recode this wonkyness
+    private static string towerTitleStatic;
+
 
     [Header("Unity Setup Fields")]
     public string enemyTag = "Enemy";
@@ -30,6 +37,7 @@ public class Tower : MonoBehaviour
         //watch out for using alot of these
         InvokeRepeating("UpdateTarget", 0f, 0.5f);
         //audioSource = GetComponent<AudioSource>();
+        
 
     }
 
