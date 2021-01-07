@@ -99,6 +99,9 @@ MonoBehaviour:
   target: {fileID: 0}
   range: 4
   fireRate: 1
+  goldCost: 10
+  towerTitle: Ice Tower
+  towerDescription: Tower shoots ice projectiles that slow the enemy.
   shootNoise: {fileID: 8300000, guid: c59c93b12905041429198d8ca1bb3f9c, type: 3}
   enemyTag: Enemy
   projectilePreFab: {fileID: 3453124500147391306, guid: 01ca6a08535b5e84fa1451ee4c7fcdd7, type: 3}

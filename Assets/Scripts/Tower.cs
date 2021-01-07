@@ -9,7 +9,11 @@ public class Tower : MonoBehaviour
     public float range = 1f;
     public float fireRate = 1f;
     private float fireCountdown = 0f;
-   // AudioSource audioSource;
+
+    public int goldCost;
+    public string towerTitle;
+    public string towerDescription;
+    // AudioSource audioSource;
     public AudioClip shootNoise;
 
     [Header("Unity Setup Fields")]

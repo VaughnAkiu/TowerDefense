@@ -98,7 +98,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   range: 5
-  fireRate: 1
+  fireRate: 2
+  goldCost: 10
+  towerTitle: Lightning Tower
+  towerDescription: Tower shoots lightning balls at a high rate.
   shootNoise: {fileID: 8300000, guid: 2325f5391f6ad584791f86f46fb51a06, type: 3}
   enemyTag: Enemy
   projectilePreFab: {fileID: 9051573058420525348, guid: e021ab4fc13d2e34c84d4e10c91e0a1c, type: 3}

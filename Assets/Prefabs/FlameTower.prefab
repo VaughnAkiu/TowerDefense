@@ -129,6 +129,9 @@ MonoBehaviour:
   target: {fileID: 0}
   range: 5
   fireRate: 1
+  goldCost: 10
+  towerTitle: Flame Tower
+  towerDescription: Tower shoots area of effect fireballs at a slow rate.
   shootNoise: {fileID: 8300000, guid: c59c93b12905041429198d8ca1bb3f9c, type: 3}
   enemyTag: Enemy
   projectilePreFab: {fileID: 4691547246493804362, guid: 54302feef4c13b24292cf9ae22241ce9, type: 3}
