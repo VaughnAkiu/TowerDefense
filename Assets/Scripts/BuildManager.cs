@@ -74,6 +74,8 @@ public class BuildManager : MonoBehaviour
         turretToBuild = null;
         selectedTile = node;
         buildableTileUI.SetTarget(node);
+        //going to have to change this.
+        buildableTileUI.UpdateFlameTowerUI();
     }
 
     public void DeselectNode()
