@@ -90,7 +90,7 @@ public class BuildManager : MonoBehaviour
         selectedTile = node;
         buildableTileUI.SetTarget(node);
         //going to have to change this.
-        buildableTileUI.UpdateFlameTowerUI();
+        //buildableTileUI.UpdateFlameTowerUI();
     }
 
     public void DeselectNode()

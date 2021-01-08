@@ -38,6 +38,8 @@ public class PlayerStats : MonoBehaviour
     {
         killCountText.text = "Kill Count: " + PlayerStats.mobKills;
         playerLivesText.text = "Lives: " + PlayerStats.livesRemaining;
+        playerGoldText.text = "Gold: " + PlayerStats.gold;
+        //waveLevelText.text = "Wave Level: " + PlayerStats.waveLevel;
     }
 
 

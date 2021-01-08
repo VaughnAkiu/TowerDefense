@@ -3101,13 +3101,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   flameTower:
     prefab: {fileID: 4445632434538574505, guid: 611062242b4ae3548af10dc8ed5e0cba, type: 3}
-    cost: 10
+    cost: 25
   iceTower:
     prefab: {fileID: 6152755603204717045, guid: 3468d780b0aeb7d43836bbcd0d00cf92, type: 3}
-    cost: 10
+    cost: 25
   lightningTower:
     prefab: {fileID: 2657537280754728979, guid: 29f998ff540f26840a64efee4ddfbe2d, type: 3}
-    cost: 10
+    cost: 50
 --- !u!4 &1101000937
 Transform:
   m_ObjectHideFlags: 0

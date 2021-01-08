@@ -85,7 +85,11 @@ public class BuildableTile : MonoBehaviour
             return;
         }
 
+        //subtract tower cost from player gold
         PlayerStats.gold -= blueprint.cost;
+        //update UI player gold text
+        PlayerStats.instance.ChangeGoldText();
+        //instantiate tower onto tile
         GameObject _tower = (GameObject)Instantiate(blueprint.prefab, GetBuildPosition(), Quaternion.identity);
         tower = _tower;
 

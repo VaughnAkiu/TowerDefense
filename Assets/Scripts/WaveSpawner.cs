@@ -63,7 +63,6 @@ public class WaveSpawner : MonoBehaviour
         currentlySpawning = false;
         waveNumber++;
     }
-    
     IEnumerator SpawnLevelTwo()
     {
         for (int i = 0; i < 20; i++)
@@ -75,7 +74,6 @@ public class WaveSpawner : MonoBehaviour
         currentlySpawning = false;
         waveNumber++;
     }
-
     IEnumerator SpawnLevelThree()
     {
         for (int i = 0; i < 1; i++)
