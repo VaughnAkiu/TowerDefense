@@ -7,12 +7,13 @@ public class BuildManager : MonoBehaviour
     //one instance of build manager referencing itself
     public static BuildManager instance;
 
-
     //implementing this to try and understand it better.
     private BuildableTile selectedTile;
 
     public BuildableTileUI buildableTileUI;
 
+
+    private TowerBlueprint towerToBuild;
 
     private void Awake()
     {
@@ -55,6 +56,12 @@ public class BuildManager : MonoBehaviour
         selectedTile = null;
         buildableTileUI.HideUI();
 
+    }
+
+    public void SelectTurretToBuild(TowerBlueprint tower)
+    {
+        towerToBuild = tower;
+        //DeselectBuildableTile();
     }
 
 
