@@ -103,7 +103,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: e1af2120cf5397249b8a12fd922ef7c1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1270462b1e9dab342a8f4cc3c4f029ce, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -130,6 +130,7 @@ MonoBehaviour:
   range: 5
   fireRate: 1
   goldCost: 10
+  upgradeCost: 0
   towerTitle: Flame Tower
   towerDescription: Tower shoots area of effect fireballs at a slow rate.
   shootNoise: {fileID: 8300000, guid: c59c93b12905041429198d8ca1bb3f9c, type: 3}

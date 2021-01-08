@@ -97,7 +97,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  damage: 3
+  damage: 4
   impactEffect: {fileID: 3808978131179976525, guid: 0f3c28817a9c90b468699a257dcdd44d, type: 3}
 --- !u!96 &956017947935011821
 TrailRenderer:

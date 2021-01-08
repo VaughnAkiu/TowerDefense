@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 70467449555383051}
   - component: {fileID: 6433086752024718426}
   m_Layer: 0
-  m_Name: Projectile
+  m_Name: Ice Projectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -95,5 +95,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcafb117a214ec546b5adb76cffafe04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 25
+  speed: 15
+  damage: 2
   impactEffect: {fileID: 5374684015792301235, guid: 11bf1a14f4e8a6440b85adfb51283227, type: 3}
