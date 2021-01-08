@@ -16,7 +16,7 @@ public class BuildManager : MonoBehaviour
     private TowerBlueprint towerToBuild;
     //(property) only allowed to get something, variable can never be set
     //check if turretToBuild != null then return the result (turretToBuild)
-    public bool CanBuild { get { return turretToBuild != null; } }
+    public bool CanBuild { get { return towerToBuild != null; } }
 
     private void Awake()
     {
@@ -33,14 +33,14 @@ public class BuildManager : MonoBehaviour
     public GameObject FrostTower;
     public GameObject LightningTower;
 
-    private GameObject turretToBuild;
+    //private GameObject turretToBuild;
     /*
     private void Start()
     {
         turretToBuild = FlameTower;
     }*/
 
-
+/*
     public void BuildFlameTower()
     {
         turretToBuild = FlameTower;
@@ -59,7 +59,7 @@ public class BuildManager : MonoBehaviour
         selectedTile = null;
         buildableTileUI.HideUI();
 
-    }
+    }*/
 
     public void SelectTowerToBuild(TowerBlueprint tower)
     {
@@ -72,11 +72,11 @@ public class BuildManager : MonoBehaviour
         return towerToBuild;
     }
 
-
+    /*
     public GameObject GetTurretToBuild()
     {
         return turretToBuild;
-    }
+    }*/
 
     public void SelectNode(BuildableTile givenTile)
     {
@@ -89,7 +89,7 @@ public class BuildManager : MonoBehaviour
         }
 
         //get rid of turret on cursor?
-        turretToBuild = null;
+        towerToBuild = null;
         selectedTile = givenTile;
         //can put in selected tile or given tile since it was just assigned
         //set target transforms UI to that position and sets the UI active
