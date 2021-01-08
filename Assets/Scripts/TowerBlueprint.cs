@@ -7,5 +7,10 @@ public class TowerBlueprint
 {
     public GameObject prefab;
     public int cost;
+    public string towerDescription;
+    public string towerName;
+    public int upgradeCost;
+
+
 
 }

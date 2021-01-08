@@ -3102,12 +3102,21 @@ MonoBehaviour:
   flameTower:
     prefab: {fileID: 4445632434538574505, guid: 611062242b4ae3548af10dc8ed5e0cba, type: 3}
     cost: 25
+    towerDescription: Tower shoots area of effect fireballs at a slow rate.
+    towerName: Flame Tower
+    upgradeCost: 100
   iceTower:
     prefab: {fileID: 6152755603204717045, guid: 3468d780b0aeb7d43836bbcd0d00cf92, type: 3}
     cost: 25
+    towerDescription: Tower shoots ice projectiles that slow the enemy.
+    towerName: Ice Tower
+    upgradeCost: 100
   lightningTower:
     prefab: {fileID: 2657537280754728979, guid: 29f998ff540f26840a64efee4ddfbe2d, type: 3}
     cost: 50
+    towerDescription: Tower shoots lightning balls at a high rate.
+    towerName: Lightning Tower
+    upgradeCost: 100
 --- !u!4 &1101000937
 Transform:
   m_ObjectHideFlags: 0
@@ -5199,7 +5208,7 @@ MonoBehaviour:
   ui: {fileID: 1920052459}
   towerNameText: {fileID: 990886621}
   towerDescriptionText: {fileID: 2106062482}
-  goldSellPriceText: {fileID: 0}
+  goldSellPriceText: {fileID: 1173519636}
   upgradeCostText: {fileID: 263653115}
 --- !u!1 &1966199059
 GameObject:

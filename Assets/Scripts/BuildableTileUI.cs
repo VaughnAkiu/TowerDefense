@@ -7,8 +7,6 @@ public class BuildableTileUI : MonoBehaviour
 {
 
     private BuildableTile target;
-    //this is excessive, i should create a way to access all the towers from one script probably.
-    private FlameTower flameTower;
 
     public GameObject ui;
 
@@ -17,19 +15,25 @@ public class BuildableTileUI : MonoBehaviour
     public Text goldSellPriceText;
     public Text upgradeCostText;
 
+    /// <summary>
+    /// transforms UI to according buildable tile and sets the UI active at that position
+    /// </summary>
+    /// <param name="_target"></param>
     public void SetTarget (BuildableTile _target)
     {
         target = _target;
-
         transform.position = target.GetBuildPosition();
+        UpdateUI();
         ui.SetActive(true);
     }
-    /*
-    public void UpdateFlameTowerUI()
+    
+    public void UpdateUI()
     {
-        towerNameText.text = flameTower.getTowerName();
+        towerNameText.text = target.towerBlueprint.towerName;
+        towerDescriptionText.text = target.towerBlueprint.towerDescription;
         
-    }*/
+        
+    }
 
     public void HideUI ()
     {

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class FlameTower : MonoBehaviour
 {
+    /*
     private int goldCost = 10;
     private int upgradeCost = 50;
     private string towerDescription = "Flame tower that uses slower area of effect attacks";
@@ -19,4 +20,5 @@ public class FlameTower : MonoBehaviour
     {
         return towerName;
     }
+    */
 }
