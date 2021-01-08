@@ -8,6 +8,8 @@ public class WaveSpawner : MonoBehaviour
     //public Transform enemyPrefab;
     public Transform goopMob;
     public Transform goopChunk;
+    public Transform skritt;
+    public Transform theVoid;
 
     public Transform spawnPoint;
 
@@ -40,6 +42,18 @@ public class WaveSpawner : MonoBehaviour
             else if (waveNumber == 3)
             {
                 StartCoroutine(SpawnLevelThree());
+                ChangeWaveLevelText();
+                currentlySpawning = true;
+            }
+            else if (waveNumber == 4)
+            {
+                StartCoroutine(SpawnLevelFour());
+                ChangeWaveLevelText();
+                currentlySpawning = true;
+            }
+            else if (waveNumber == 5)
+            {
+                StartCoroutine(SpawnLevelFive());
                 ChangeWaveLevelText();
                 currentlySpawning = true;
             }
@@ -82,6 +96,30 @@ public class WaveSpawner : MonoBehaviour
             SpawnGoopChunk();
         }
         StopCoroutine(SpawnLevelThree());
+        currentlySpawning = false;
+        waveNumber++;
+    }
+    IEnumerator SpawnLevelFour()
+    {
+        for (int i = 0; i < 50; i++)
+        {
+            yield return new WaitForSecondsRealtime(0.5f);
+            SpawnSkritt();
+        }
+        StopCoroutine(SpawnLevelFour());
+        currentlySpawning = false;
+        waveNumber++;
+    }
+    IEnumerator SpawnLevelFive()
+    {
+        SpawnTheVoid();
+        for (int i = 0; i < 200; i++)
+        {
+            yield return new WaitForSecondsRealtime(0.25f);
+            SpawnSkritt();
+            
+        }
+        StopCoroutine(SpawnLevelFive());
         currentlySpawning = false;
         waveNumber++;
     }
@@ -135,4 +173,13 @@ public class WaveSpawner : MonoBehaviour
         Instantiate(goopChunk, spawnPoint.position, spawnPoint.rotation);
     }
 
+    void SpawnSkritt()
+    {
+        Instantiate(skritt, spawnPoint.position, spawnPoint.rotation);
+    }
+
+    void SpawnTheVoid()
+    {
+        Instantiate(theVoid, spawnPoint.position, spawnPoint.rotation);
+    }
 }

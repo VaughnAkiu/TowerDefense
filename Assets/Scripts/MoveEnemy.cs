@@ -6,6 +6,9 @@ public class MoveEnemy : MonoBehaviour
     public float speed = 1f;
     public Rigidbody2D rb;
 
+    //trying to use this as slowing effect otherwise unused
+    private Enemy enemy;
+
     //position of enemy, related to waypoints.
     //private int position = 0;
 
@@ -55,6 +58,9 @@ public class MoveEnemy : MonoBehaviour
 
     private void Start()
     {
+        //trying to use this for slowing effect otherwise unused
+        enemy = GetComponent<Enemy>();
+
         movement.x = 1;
         movement.y = 0;
         
@@ -68,44 +74,7 @@ public class MoveEnemy : MonoBehaviour
 
     private void FixedUpdate()
     {
-        /*
-        //starting point
-        if (position == 0)
-        {
-            movement.x = 0;
-            movement.y = -1;
-        }
-        else if (position == 1)
-        {
-            movement.x = 1;
-            movement.y = 0;
-        }
-        else if (position == 2)
-        {
-            movement.x = 0;
-            movement.y = -1;
-        }
-        else if (position == 3)
-        {
-            movement.x = -1;
-            movement.y = 0;
-        }
-        else if (position == 4)
-        {
-            movement.x = 0;
-            movement.y = -1;
-        }
-        else if (position == 5)
-        {
-            movement.x = -1;
-            movement.y = 0;
-        }
-        else if (position == 6)
-        {
-            movement.x = 0;
-            movement.y = -1;
-        }*/
-
+        speed = enemy.speed;     
         rb.MovePosition(rb.position + movement * speed * Time.fixedDeltaTime);
         
     }

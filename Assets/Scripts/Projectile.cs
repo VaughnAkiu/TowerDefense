@@ -7,6 +7,7 @@ public class Projectile : MonoBehaviour
 
     public float speed = 25f;
     public int damage = 2;
+    public float slowPercent = 0f;
 
     public GameObject impactEffect;
 
@@ -47,6 +48,10 @@ public class Projectile : MonoBehaviour
         Destroy(effectInstance, 0.5f);
 
         Damage(target);
+        //based on slow percent of the projectile
+        Slow(target, slowPercent);
+        
+
         //if target is dead can destroy target.gameObject
         //Destroy(target.gameObject);
         Destroy(gameObject);
@@ -62,6 +67,18 @@ public class Projectile : MonoBehaviour
         if (e != null)
         {
             e.TakeDamage(damage);
+        }
+    }
+
+    void Slow (Transform enemy, float slowPercentAmount)
+    {
+      
+
+        Enemy e = enemy.GetComponent<Enemy>();
+
+        if (e != null)
+        {
+            e.Slow(slowPercentAmount);
         }
     }
 }
