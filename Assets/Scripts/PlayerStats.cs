@@ -7,7 +7,8 @@ public class PlayerStats : MonoBehaviour
 {
     
     //use static so can be accessed by other scripts
-    public static int gold;
+    //giving values to static variables means the variable will reset to this value on scene change
+    public static int gold = 100;
     public static int mobKills = 0;
     public static int livesRemaining = 100;
     public static int waveLevel;

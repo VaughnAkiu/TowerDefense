@@ -14,6 +14,9 @@ public class BuildManager : MonoBehaviour
 
 
     private TowerBlueprint towerToBuild;
+    //(property) only allowed to get something, variable can never be set
+    //check if turretToBuild != null then return the result (turretToBuild)
+    public bool CanBuild { get { return turretToBuild != null; } }
 
     private void Awake()
     {
@@ -58,10 +61,15 @@ public class BuildManager : MonoBehaviour
 
     }
 
-    public void SelectTurretToBuild(TowerBlueprint tower)
+    public void SelectTowerToBuild(TowerBlueprint tower)
     {
         towerToBuild = tower;
         //DeselectBuildableTile();
+    }
+
+    public TowerBlueprint GetTowerToBuild()
+    {
+        return towerToBuild;
     }
 
 

@@ -242,7 +242,7 @@ GameObject:
   - component: {fileID: 72255720}
   - component: {fileID: 72255719}
   m_Layer: 5
-  m_Name: LightningTowerButton
+  m_Name: PurchaseLightningTowerButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -315,6 +315,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1706927765}
         m_TargetAssemblyTypeName: BuildManager, Assembly-CSharp
         m_MethodName: BuildLightningTower
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1101000936}
+        m_TargetAssemblyTypeName: Shop, Assembly-CSharp
+        m_MethodName: SelectLightningTower
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1072,7 +1084,7 @@ GameObject:
   - component: {fileID: 263653116}
   - component: {fileID: 263653115}
   m_Layer: 5
-  m_Name: Text
+  m_Name: UpgradeButtonText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1878,7 +1890,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
+  m_PresetInfoIsWorld: 1
 --- !u!223 &617599131
 Canvas:
   m_ObjectHideFlags: 0
@@ -3058,6 +3070,58 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1033223504}
   m_CullTransparentMesh: 1
+--- !u!1 &1101000935
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1101000937}
+  - component: {fileID: 1101000936}
+  m_Layer: 0
+  m_Name: Shop
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1101000936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1101000935}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ea0350625af7244593a3c39da1d8fed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flameTower:
+    prefab: {fileID: 4445632434538574505, guid: 611062242b4ae3548af10dc8ed5e0cba, type: 3}
+    cost: 10
+  iceTower:
+    prefab: {fileID: 6152755603204717045, guid: 3468d780b0aeb7d43836bbcd0d00cf92, type: 3}
+    cost: 10
+  lightningTower:
+    prefab: {fileID: 2657537280754728979, guid: 29f998ff540f26840a64efee4ddfbe2d, type: 3}
+    cost: 10
+--- !u!4 &1101000937
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1101000935}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1139085055 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7585848124523557526, guid: 4bdc9e3d9eb6b3240b20e16f61f1f8d8, type: 3}
@@ -3075,7 +3139,7 @@ GameObject:
   - component: {fileID: 1173519637}
   - component: {fileID: 1173519636}
   m_Layer: 5
-  m_Name: Text
+  m_Name: SellButtonText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3987,7 +4051,7 @@ GameObject:
   - component: {fileID: 1549666155}
   - component: {fileID: 1549666154}
   m_Layer: 5
-  m_Name: FlameTowerButton
+  m_Name: PurchaseFlameTowerButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4057,9 +4121,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1706927765}
-        m_TargetAssemblyTypeName: BuildManager, Assembly-CSharp
-        m_MethodName: BuildFlameTower
+      - m_Target: {fileID: 1101000936}
+        m_TargetAssemblyTypeName: Shop, Assembly-CSharp
+        m_MethodName: SelectFlameTower
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4278,7 +4342,7 @@ GameObject:
   - component: {fileID: 1609122874}
   - component: {fileID: 1609122873}
   m_Layer: 5
-  m_Name: FrostTowerButton
+  m_Name: PurchaseFrostTowerButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4351,6 +4415,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1706927765}
         m_TargetAssemblyTypeName: BuildManager, Assembly-CSharp
         m_MethodName: BuildFrostTower
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1101000936}
+        m_TargetAssemblyTypeName: Shop, Assembly-CSharp
+        m_MethodName: SelectIceTower
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5133,6 +5209,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ui: {fileID: 1920052459}
+  towerNameText: {fileID: 990886621}
+  towerDescriptionText: {fileID: 2106062482}
+  goldSellPriceText: {fileID: 0}
+  upgradeCostText: {fileID: 263653115}
 --- !u!1 &1966199059
 GameObject:
   m_ObjectHideFlags: 0

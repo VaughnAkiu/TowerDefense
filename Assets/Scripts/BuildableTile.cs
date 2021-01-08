@@ -5,9 +5,13 @@ using UnityEngine.EventSystems;
 public class BuildableTile : MonoBehaviour
 {
     //public GameObject towerPrefab;
-    private GameObject tower;
+    [Header("Optional")]
+    public GameObject tower;
+    public TowerBlueprint towerBlueprint;
 
     BuildManager buildManager;
+
+
 
 
     private void Start()
@@ -44,6 +48,18 @@ public class BuildableTile : MonoBehaviour
             return;
         */
 
+        //if tower is not built return this tile to the buildManager.
+        if (tower != null)
+        {
+            buildManager.SelectNode(this);
+            return;
+        }
+
+        if (!buildManager.CanBuild)
+            return;
+
+        BuildTower(buildManager.GetTowerToBuild());
+        /*
         if (CanPlaceTower())
         {
             GameObject turretToBuild = buildManager.GetTurretToBuild();
@@ -53,14 +69,33 @@ public class BuildableTile : MonoBehaviour
         {
             //select this tile if turret is already built.
             BuildManager.instance.SelectNode(this);
-        }
+        }*/
     
         //play audio source
         //play visual effect
         //deduct gold
     }
 
+    private void BuildTower (TowerBlueprint blueprint)
+    {
+        if (PlayerStats.gold < blueprint.cost)
+        {
+            Debug.Log("Not enough money to build this tower.");
+            //send popup text (red floating text)
+            return;
+        }
 
+        PlayerStats.gold -= blueprint.cost;
+        GameObject _tower = (GameObject)Instantiate(blueprint.prefab, GetBuildPosition(), Quaternion.identity);
+        tower = _tower;
+
+        towerBlueprint = blueprint;
+
+        //play effect (instantiate effect at build spot)
+        //destroy effect
+
+        Debug.Log("Turret built!");
+    }
 
 
 

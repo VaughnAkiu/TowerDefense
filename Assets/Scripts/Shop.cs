@@ -20,16 +20,16 @@ public class Shop : MonoBehaviour
     public void SelectFlameTower()
     {
         Debug.Log("Flame Tower selected.");
-        buildManager.SelectTurretToBuild(flameTower);
+        buildManager.SelectTowerToBuild(flameTower);
     }
     public void SelectIceTower()
     {
         Debug.Log("Ice Tower selected.");
-        buildManager.SelectTurretToBuild(iceTower);
+        buildManager.SelectTowerToBuild(iceTower);
     }
     public void SelectLightningTower()
     {
         Debug.Log("Lightning Tower selected.");
-        buildManager.SelectTurretToBuild(lightningTower);
+        buildManager.SelectTowerToBuild(lightningTower);
     }
 }
