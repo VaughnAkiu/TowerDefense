@@ -24,12 +24,12 @@ public class BuildableTileUI : MonoBehaviour
         transform.position = target.GetBuildPosition();
         ui.SetActive(true);
     }
-
+    /*
     public void UpdateFlameTowerUI()
     {
         towerNameText.text = flameTower.getTowerName();
         
-    }
+    }*/
 
     public void HideUI ()
     {

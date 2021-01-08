@@ -48,7 +48,7 @@ public class BuildableTile : MonoBehaviour
             return;
         */
 
-        //if tower is not built return this tile to the buildManager.
+        //if tower is built return this tile to the buildManager.
         if (tower != null)
         {
             buildManager.SelectNode(this);

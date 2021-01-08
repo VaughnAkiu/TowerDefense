@@ -78,17 +78,22 @@ public class BuildManager : MonoBehaviour
         return turretToBuild;
     }
 
-    public void SelectNode(BuildableTile node)
+    public void SelectNode(BuildableTile givenTile)
     {
-        if (selectedTile == node)
+        //if selectedTile is equal to givenTile then deselect the tile and hide the UI
+        //if tile is already selected then deselect and hide UI
+        if (selectedTile == givenTile)
         {
             DeselectNode();
             return;
         }
 
+        //get rid of turret on cursor?
         turretToBuild = null;
-        selectedTile = node;
-        buildableTileUI.SetTarget(node);
+        selectedTile = givenTile;
+        //can put in selected tile or given tile since it was just assigned
+        //set target transforms UI to that position and sets the UI active
+        buildableTileUI.SetTarget(givenTile);
         //going to have to change this.
         //buildableTileUI.UpdateFlameTowerUI();
     }
