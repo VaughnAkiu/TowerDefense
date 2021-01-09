@@ -6,8 +6,10 @@ public class MoveEnemy : MonoBehaviour
 {
     public float speed = 1f;
     public Rigidbody2D rb;
+    
 
-    private SceneChange sceneChange;
+    //public SceneChange sceneChange;
+    //public SoundsMaster soundMaster;
 
     //trying to use this as slowing effect otherwise unused
     private Enemy enemy;
@@ -62,6 +64,7 @@ public class MoveEnemy : MonoBehaviour
                 //use game over scene when that is setup
                 //sceneChange.GameOver();
                 //sceneChange.MainMenu();
+                //AudioSource.PlayClipAtPoint(soundMaster.gameOverNoise, transform.position, 0.9f);
                 SceneManager.LoadScene("MainMenuScene");
             }
             
@@ -75,7 +78,7 @@ public class MoveEnemy : MonoBehaviour
     {
         //trying to use this for slowing effect otherwise unused
         enemy = GetComponent<Enemy>();
-
+        //soundMaster = GetComponent<SoundsMaster>();
         //sceneChange = GetComponent<SceneChange>();
 
         movement.x = 1;

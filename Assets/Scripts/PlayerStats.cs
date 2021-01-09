@@ -10,7 +10,7 @@ public class PlayerStats : MonoBehaviour
     //giving values to static variables means the variable will reset to this value on scene change
     public static int gold = 100;
     public static int mobKills = 0;
-    public static int livesRemaining = 10;
+    public static int livesRemaining = 1;
     public static int waveLevel;
 
     //Unity stuff
