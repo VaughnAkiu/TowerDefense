@@ -17,6 +17,16 @@ public class SceneChange : MonoBehaviour
         SceneManager.LoadScene(gameScene);
     }
 
+    public void GameOver()
+    {
+        SceneManager.LoadScene(gameOverScene);
+    }
+
+    public void MainMenu()
+    {
+        SceneManager.LoadScene(mainMenuScene);
+    }
+
     public void QuitGame ()
     {
         Debug.Log("Quitting Application");

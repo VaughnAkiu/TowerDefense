@@ -1,10 +1,13 @@
 
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MoveEnemy : MonoBehaviour
 {
     public float speed = 1f;
     public Rigidbody2D rb;
+
+    private SceneChange sceneChange;
 
     //trying to use this as slowing effect otherwise unused
     private Enemy enemy;
@@ -49,7 +52,19 @@ public class MoveEnemy : MonoBehaviour
         else if (collision.name == "Endpoint")
         {
             PlayerStats.livesRemaining--;
-            PlayerStats.instance.ChangePlayerLivesText();
+
+            if(PlayerStats.livesRemaining > 0)
+            {
+                PlayerStats.instance.ChangePlayerLivesText();
+            }
+            else
+            {
+                //use game over scene when that is setup
+                //sceneChange.GameOver();
+                //sceneChange.MainMenu();
+                SceneManager.LoadScene("MainMenuScene");
+            }
+            
             Destroy(gameObject);
 
         }
@@ -60,6 +75,8 @@ public class MoveEnemy : MonoBehaviour
     {
         //trying to use this for slowing effect otherwise unused
         enemy = GetComponent<Enemy>();
+
+        //sceneChange = GetComponent<SceneChange>();
 
         movement.x = 1;
         movement.y = 0;
