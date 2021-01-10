@@ -59,7 +59,7 @@ public class MoveEnemy : MonoBehaviour
             {
                 PlayerStats.instance.ChangePlayerLivesText();
             }
-            else
+            else //end game trigger
             {
                 //use game over scene when that is setup
                 //sceneChange.GameOver();
