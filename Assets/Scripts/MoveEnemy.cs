@@ -66,7 +66,8 @@ public class MoveEnemy : MonoBehaviour
                 //use game over scene when that is setup
                 //sceneChange.GameOver();
                 //sceneChange.MainMenu();
-                AudioSource.PlayClipAtPoint(soundMaster.gameOverNoise, transform.position, 0.9f);
+                //find position of center map
+                AudioSource.PlayClipAtPoint(soundMaster.gameOverNoise, new Vector2(0f, 0f), 1f);
                 //SceneManager.LoadScene("MainMenuScene");
             }
             
