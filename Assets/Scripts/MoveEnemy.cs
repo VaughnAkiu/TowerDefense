@@ -14,6 +14,8 @@ public class MoveEnemy : MonoBehaviour
     //trying to use this as slowing effect otherwise unused
     private Enemy enemy;
 
+    private SoundsMaster soundMaster;
+
     //position of enemy, related to waypoints.
     //private int position = 0;
 
@@ -64,14 +66,24 @@ public class MoveEnemy : MonoBehaviour
                 //use game over scene when that is setup
                 //sceneChange.GameOver();
                 //sceneChange.MainMenu();
-                //AudioSource.PlayClipAtPoint(soundMaster.gameOverNoise, transform.position, 0.9f);
-                SceneManager.LoadScene("MainMenuScene");
+                AudioSource.PlayClipAtPoint(soundMaster.gameOverNoise, transform.position, 0.9f);
+                //SceneManager.LoadScene("MainMenuScene");
             }
             
             Destroy(gameObject);
 
         }
 
+    }
+    /*
+     Awake is called when the script is first loaded,
+     or when an object it is attached to is instantiated.
+It only gets called once on each script, and only after other objects are initialised.
+This means that it is safe to create references to other game objects and components in Awake.
+       */
+    private void Awake()
+    {
+        soundMaster = GameObject.FindGameObjectWithTag("SoundsMaster").GetComponent<SoundsMaster>();
     }
 
     private void Start()
