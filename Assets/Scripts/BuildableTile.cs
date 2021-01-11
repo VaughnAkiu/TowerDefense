@@ -82,6 +82,7 @@ public class BuildableTile : MonoBehaviour
         {
             Debug.Log("Not enough money to build this tower.");
             //send popup text (red floating text)
+
             return;
         }
 
