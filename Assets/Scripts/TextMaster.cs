@@ -31,10 +31,11 @@ public class TextMaster : MonoBehaviour
         //Text spawnedText = (Text)Instantiate(buildErrorText, position, Quaternion.identity);
         //spawnedText.transform.SetParent(mainCanvas.transform);
         GameObject spawnedText = (GameObject)Instantiate(buildErrorTextObject, position, Quaternion.identity);
-        TextMesh theText = spawnedText.transform.GetComponent<TextMesh>();
+        //TextMesh theText = spawnedText.transform.GetComponent<TextMesh>();
+        TextMesh theText = spawnedText.transform.GetComponentInChildren<TextMesh>();
         theText.text = newText;
         
-        Destroy(spawnedText, 5f);   //destroy after 5s
+        Destroy(spawnedText, 3f);   //destroy after 3s
     }
 
 }
