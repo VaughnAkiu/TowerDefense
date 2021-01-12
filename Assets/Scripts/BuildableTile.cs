@@ -1,6 +1,7 @@
 
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class BuildableTile : MonoBehaviour
 {
@@ -8,15 +9,17 @@ public class BuildableTile : MonoBehaviour
     [Header("Optional")]
     public GameObject tower;
     public TowerBlueprint towerBlueprint;
+    //public Text errorText;
+    private string notEnoughGoldString;
 
+    TextMaster textMaster;
     BuildManager buildManager;
 
-
-
-
+    
     private void Start()
     {
         buildManager = BuildManager.instance;
+        textMaster = TextMaster.instance;
     }
 
     public Vector2 GetBuildPosition ()
@@ -82,7 +85,8 @@ public class BuildableTile : MonoBehaviour
         {
             Debug.Log("Not enough money to build this tower.");
             //send popup text (red floating text)
-
+            notEnoughGoldString = "Not enough gold, you need " + blueprint.cost + " gold to build this tower.";
+            textMaster.spawnText(notEnoughGoldString, transform.position);
             return;
         }
 
