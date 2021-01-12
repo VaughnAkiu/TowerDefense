@@ -33,33 +33,6 @@ public class BuildManager : MonoBehaviour
     public GameObject FrostTower;
     public GameObject LightningTower;
 
-    //private GameObject turretToBuild;
-    /*
-    private void Start()
-    {
-        turretToBuild = FlameTower;
-    }*/
-
-/*
-    public void BuildFlameTower()
-    {
-        turretToBuild = FlameTower;
-        selectedTile = null;
-        buildableTileUI.HideUI();
-    }
-    public void BuildFrostTower()
-    {
-        turretToBuild = FrostTower;
-        selectedTile = null;
-        buildableTileUI.HideUI();
-    }
-    public void BuildLightningTower()
-    {
-        turretToBuild = LightningTower;
-        selectedTile = null;
-        buildableTileUI.HideUI();
-
-    }*/
 
     public void SelectTowerToBuild(TowerBlueprint tower)
     {

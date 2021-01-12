@@ -44,12 +44,6 @@ public class BuildableTile : MonoBehaviour
     //activate when mouse click is finished
     private void OnMouseDown()
     {
-        /*
-        //are we currently clicking a ui element? if so then return (ignore mouse click)
-        //might cause an error with our setup
-        if (EventSystem.current.IsPointerOverGameObject())
-            return;
-        */
 
         //if tower is built return this tile to the buildManager.
         if (tower != null)
@@ -62,17 +56,6 @@ public class BuildableTile : MonoBehaviour
             return;
 
         BuildTower(buildManager.GetTowerToBuild());
-        /*
-        if (CanPlaceTower())
-        {
-            GameObject turretToBuild = buildManager.GetTurretToBuild();
-            tower = (GameObject)Instantiate(turretToBuild, transform.position, transform.rotation);
-        }
-        else //assuming a turret is already built
-        {
-            //select this tile if turret is already built.
-            BuildManager.instance.SelectNode(this);
-        }*/
     
         //play audio source
         //play visual effect

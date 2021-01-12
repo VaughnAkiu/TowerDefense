@@ -29,15 +29,12 @@ public class Tower : MonoBehaviour
     public GameObject projectilePreFab;
     public Transform firePoint;
 
-
-
     // Start is called before the first frame update
     void Start()
     {
         //watch out for using alot of these
         InvokeRepeating("UpdateTarget", 0f, 0.5f);
         //audioSource = GetComponent<AudioSource>();
-        
 
     }
 
@@ -82,8 +79,6 @@ public class Tower : MonoBehaviour
             
         }
         fireCountdown -= Time.deltaTime;
-
-
     }
 
     void Shoot()
