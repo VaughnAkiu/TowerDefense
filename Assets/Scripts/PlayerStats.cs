@@ -12,6 +12,7 @@ public class PlayerStats : MonoBehaviour
     public static int mobKills = 0;
     public static int livesRemaining = 1;
     public static int waveLevel;
+    public static int jewels = 0; //currency that can be used outside of the maps to buy 'special' stuff
 
     //Unity stuff
     public Text killCountText;
