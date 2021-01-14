@@ -8,7 +8,8 @@ public class Shop : MonoBehaviour
     public TowerBlueprint flameTower;
     public TowerBlueprint iceTower;
     public TowerBlueprint lightningTower;
-
+    public TowerBlueprint baseTower;
+    
     BuildManager buildManager;
 
     // Start is called before the first frame update
@@ -31,5 +32,10 @@ public class Shop : MonoBehaviour
     {
         Debug.Log("Lightning Tower selected.");
         buildManager.SelectTowerToBuild(lightningTower);
+    }
+
+    public void SelectBaseTower()
+    {
+        buildManager.SelectTowerToBuild(baseTower);
     }
 }
