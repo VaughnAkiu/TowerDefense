@@ -63,3 +63,7 @@ crashlytics-build.properties
 *.meta
 *.meta
 .idea/.idea.TowerDefense/.idea/vcs.xml
+ProjectSettings/TimelineSettings.asset
+ProjectSettings/SceneTemplateSettings.json
+UserSettings/EditorUserSettings.asset
+UserSettings/EditorUserSettings.asset
