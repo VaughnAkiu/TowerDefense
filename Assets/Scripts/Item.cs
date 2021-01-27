@@ -6,6 +6,11 @@ public class Item : MonoBehaviour
 {
     public string name;
     public string description;
+    //possibly used to increase tower damage
+    public int damage = 0;
+    //possibly used to increase tower attacking speed
+    public int speed = 0;
+    
 
     public string getName()
     {
