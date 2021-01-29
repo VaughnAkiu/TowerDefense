@@ -21,7 +21,16 @@ public class Item : MonoBehaviour
     {
         return this.description;
     }
-    
+
+    public int getDamage()
+    {
+        return this.damage;
+    }
+
+    public int getSpeed()
+    {
+        return this.speed;
+    }
     //placeholder
     //cloak of flame
     //
