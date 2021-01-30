@@ -33,7 +33,9 @@ public class Item : MonoBehaviour
     }
     //placeholder
     //cloak of flame
-    //
+    //stone of obsidion
+    //Glacial Cloak
+    //Spired Lightning
     
     
 }
