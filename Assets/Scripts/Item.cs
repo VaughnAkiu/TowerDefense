@@ -33,6 +33,13 @@ public class Item : MonoBehaviour
     }
     //placeholder
     //cloak of flame
+    public void cloakOfFlame()
+    {
+        description = "description for cloak of flame";
+        damage = 5;
+        speed = 0;
+
+    }
     //stone of obsidion
     //Glacial Cloak
     //Spired Lightning
