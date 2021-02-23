@@ -86,7 +86,7 @@ public class Tower : MonoBehaviour
         GameObject projectileGameObject = (GameObject)Instantiate(projectilePreFab, firePoint.position, firePoint.rotation);
         Projectile projectile = projectileGameObject.GetComponent<Projectile>();
         //audioSource.PlayOneShot(shootNoise, 0.5f);
-        AudioSource.PlayClipAtPoint(shootNoise, transform.position, 0.1F);
+        AudioSource.PlayClipAtPoint(shootNoise, transform.position, 0.5F);
 
         if (projectile != null)
         {
